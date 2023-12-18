@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='search.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Add FontAwesome CSS link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>News Search</title>
+</head>
+<body>
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>News Search</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Enter keywords">
+            <!-- Add FontAwesome icon to the Search button -->
+            <button onclick="searchNews()"><i class="fas fa-search"></i> Search</button>
+        </div>
+        <section id="latest-news">
+            <h2>Latest News</h2>
+            <ul id="newsList" class="news-container"></ul>
+        </section>
+    </div>
+    <footer>
+        <p class="developer">Developed by Hrishikesh</p>
+    </footer>
+    <script src="{{ url_for('static', filename='search.js') }}"></script>
+</body>
+</html>

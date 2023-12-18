@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Headlines</title>
+    <style>
+        body {
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('https://media.istockphoto.com/id/1347273574/photo/news-studio-background.jpg?s=612x612&w=0&k=20&c=Ov3Gg_H1-7UzctnEhyG38sDkcK6EzkR-Pj8HpxMaVIk=');
+            background-attachment: fixed; /* Keep the background fixed when scrolling */
+            background-size: cover;
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            color: #0F2167;
+            animation: slideIn 1s ease-in-out;
+            text-align: center;
+        }
+
+        #newsContent {
+            margin-top: 20px;
+            background-color: rgba(0, 169, 255, 0.2);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .article {
+            flex-basis: calc(33.333% - 20px);
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #FFFBF5;
+
+            animation: slideIn 1s ease-in-out;
+            transition: box-shadow 0.6s ease-in-out, transform 0.6s ease-in-out, background-color 0.2s ease-in-out;
+        }
+
+        .article:hover {
+            box-shadow: 0 0 15px rgba(0, 51, 102, 0.3);
+            transform: scale(1.05);
+            background-color: #FFFFDD;
+            background-color: #A0E9FF; /* Light blue tint on hover */
+            border: 1px solid #0F2167;
+        }
+
+        .article h2 {
+            color: #003366;
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #0F2167;
+        }
+
+        .article p {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .article a {
+            color: #4CB9E7;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .article a:hover {
+            color: #990000;
+        }
+
+        #footer {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-size: 12px;
+            color: #888;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Top Business Headlines in the INDIA</h1>
+
+<!--<form id="searchForm">-->
+<!--    <label for="searchInput">Search:</label>-->
+<!--    <input type="text" id="searchInput" name="query" placeholder="Enter keywords...">-->
+<!--    <button type="button" onclick="searchNews()">Search</button>-->
+<!--</form>-->
+
+<div id="newsContent">
+    <!-- News content will be displayed here -->
+    {% for article in articles %}
+    <div class="article">
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.description }}</p>
+        <p><strong>Source:</strong> {{ article.source.name }}</p>
+        <p><strong>URL:</strong> <a href="{{ article.url }}" target="_blank">Read More</a></p>
+    </div>
+    {% endfor %}
+</div>
+
+<div id="footer">
+    Developed by Hrishikesh
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

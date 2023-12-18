@@ -1,0 +1,120 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('https://tse3.mm.bing.net/th/id/OIG.d89OTRZ_v7EMGaVHVkak?w=1024&h=1024&rs=1&pid=ImgDetMain');
+    color: #333; /* Dark text color */
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100vh; /* Ensure the page takes up at least the height of the viewport */
+    background-attachment: fixed; /* Keep the background fixed when scrolling */
+    background-size: cover;
+}
+
+nav {
+    background-color: #0F2167; /* Bold red for the navigation bar */
+    padding: 10px;
+}
+
+.nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 90%;
+    margin: 50px auto;
+    background-color: rgba(0, 169, 255, 0.2); /* White container background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft box shadow */
+}
+
+h1 {
+    text-align: center;
+    color: #0F2167; /* Bold red for the header */
+}
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 93%;
+    padding: 10px;
+    border: 1px solid #0F2167; /* Bold red border */
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #0F2167; /* Bold red for the button */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for button color */
+}
+
+button:hover {
+    background-color: #b30000; /* Slightly darker red on hover */
+}
+
+ul.news-container {
+    list-style-type: none;
+    padding: 0;
+    background-color: rgba(0, 169, 255, 0.1); /* White container background */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+ul.news-container li {
+    width: 48%; /* Two columns, leaving some space between */
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+ul.news-container li:hover {
+    transform: scale(1.025); /* Scale up on hover */
+    background-color: #A0E9FF; /* Light blue tint on hover */
+    border: 1px solid #0F2167;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    margin: 10px;
+}
+
+.developer {
+    font-size: 12px;
+    color: #777;
+}
+
+@media (max-width: 600px) {
+    input {
+        width: 100%;
+    }
+
+    ul.news-container li {
+        width: 100%;
+    }
+}
