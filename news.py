@@ -3,10 +3,15 @@ import requests
 
 app = Flask(__name__)
 
+@app.route('/display')
+def ind():
+    country_name = request.args.get('countryName', 'Unknown Country')
+    country_code = request.args.get('countryCode', 'in')
+    return render_template('display.html', countryName=country_name,countryCode=country_code)
+
 @app.route('/')
 def index():
-    return render_template('display.html')
-
+    return render_template('home.html')
 
 @app.route('/get_news', methods=['GET'])
 def get_news():

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Selector</title>
+    <style>
+        /* Add some basic styling for better visual appearance */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .flag-button {
+            width: 60px;
+            height: 40px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Select a Country</h1>
+
+    <div id="flagButtons">
+        <button class="flag-button" onclick="redirect('ar', 'Argentina')"><img src="argentina-flag.jpg" alt="Argentina Flag"></button>
+        <button class="flag-button" onclick="redirect('au', 'Australia')"><img src="australia-flag.jpg" alt="Australia Flag"></button>
+        <button class="flag-button" onclick="redirect('at', 'Austria')"><img src="austria-flag.jpg" alt="Austria Flag"></button>
+        <button class="flag-button" onclick="redirect('be', 'Belgium')"><img src="belgium-flag.jpg" alt="Belgium Flag"></button>
+        <button class="flag-button" onclick="redirect('br', 'Brazil')"><img src="brazil-flag.jpg" alt="Brazil Flag"></button>
+        <button class="flag-button" onclick="redirect('bg', 'Bulgaria')"><img src="bulgaria-flag.jpg" alt="Bulgaria Flag"></button>
+        <button class="flag-button" onclick="redirect('ca', 'Canada')"><img src="canada-flag.jpg" alt="Canada Flag"></button>
+        <button class="flag-button" onclick="redirect('cn', 'China')"><img src="china-flag.jpg" alt="China Flag"></button>
+        <button class="flag-button" onclick="redirect('co', 'Colombia')"><img src="colombia-flag.jpg" alt="Colombia Flag"></button>
+        <button class="flag-button" onclick="redirect('cu', 'Cuba')"><img src="cuba-flag.jpg" alt="Cuba Flag"></button>
+        <button class="flag-button" onclick="redirect('cz', 'Czech republic')"><img src="czech-republic-flag.jpg" alt="Czech Republic Flag"></button>
+        <button class="flag-button" onclick="redirect('eg', 'egypt')"><img src="egypt-flag.jpg" alt="Egypt Flag"></button>
+        <button class="flag-button" onclick="redirect('fr', 'france')"><img src="france-flag.jpg" alt="France Flag"></button>
+        <button class="flag-button" onclick="redirect('de', 'Germany')"><img src="germany-flag.jpg" alt="Germany Flag"></button>
+        <button class="flag-button" onclick="redirect('gr', 'Greece')"><img src="greece-flag.jpg" alt="Greece Flag"></button>
+        <button class="flag-button" onclick="redirect('hk', 'Hong Kong')"><img src="hong-kong-flag.jpg" alt="Hong Kong Flag"></button>
+        <button class="flag-button" onclick="redirect('hu', 'Hungary')"><img src="hungary-flag.jpg" alt="Hungary Flag"></button>
+        <button class="flag-button" onclick="redirect('in', 'India')"><img src="india-flag.jpg" alt="India Flag"></button>
+        <button class="flag-button" onclick="redirect('id', 'Indonesia')"><img src="indonesia-flag.jpg" alt="Indonesia Flag"></button>
+        <button class="flag-button" onclick="redirect('ie', 'Ireland')"><img src="ireland-flag.jpg" alt="Ireland Flag"></button>
+        <button class="flag-button" onclick="redirect('il', 'Israel')"><img src="israel-flag.jpg" alt="Israel Flag"></button>
+        <button class="flag-button" onclick="redirect('it', 'Italy')"><img src="italy-flag.jpg" alt="Italy Flag"></button>
+        <button class="flag-button" onclick="redirect('jp', 'Japan')"><img src="japan-flag.jpg" alt="Japan Flag"></button>
+        <button class="flag-button" onclick="redirect('lv', 'Latvia')"><img src="latvia-flag.jpg" alt="Latvia Flag"></button>
+        <button class="flag-button" onclick="redirect('lt', 'Lithuania')"><img src="lithuania-flag.jpg" alt="Lithuania Flag"></button>
+        <button class="flag-button" onclick="redirect('my', 'Malaysia')"><img src="malaysia-flag.jpg" alt="Malaysia Flag"></button>
+        <button class="flag-button" onclick="redirect('mx', 'Mexico')"><img src="mexico-flag.jpg" alt="Mexico Flag"></button>
+        <button class="flag-button" onclick="redirect('ma', 'Morocco')"><img src="morocco-flag.jpg" alt="Morocco Flag"></button>
+        <button class="flag-button" onclick="redirect('nl', 'Netherlands')"><img src="netherlands-flag.jpg" alt="Netherlands Flag"></button>
+        <button class="flag-button" onclick="redirect('nz', 'New Zealand')"><img src="new-zealand-flag.jpg" alt="New Zealand Flag"></button>
+        <button class="flag-button" onclick="redirect('ng', 'Nigeria')"><img src="nigeria-flag.jpg" alt="Nigeria Flag"></button>
+        <button class="flag-button" onclick="redirect('no', 'Norway')"><img src="norway-flag.jpg" alt="Norway Flag"></button>
+        <button class="flag-button" onclick="redirect('ph', 'Philippines')"><img src="philippines-flag.jpg" alt="Philippines Flag"></button>
+        <button class="flag-button" onclick="redirect('pl', 'Poland')"><img src="poland-flag.jpg" alt="Poland Flag"></button>
+        <button class="flag-button" onclick="redirect('pt', 'Portugal')"><img src="portugal-flag.jpg" alt="Portugal Flag"></button>
+        <button class="flag-button" onclick="redirect('ro', 'Romania')"><img src="romania-flag.jpg" alt="Romania Flag"></button>
+        <button class="flag-button" onclick="redirect('ru', 'Russia')"><img src="russia-flag.jpg" alt="Russia Flag"></button>
+        <button class="flag-button" onclick="redirect('sa', 'Saudi Arabia')"><img src="saudi-arabia-flag.jpg" alt="Saudi Arabia Flag"></button>
+        <button class="flag-button" onclick="redirect('rs', 'Serbia')"><img src="serbia-flag.jpg" alt="Serbia Flag"></button>
+        <button class="flag-button" onclick="redirect('sg', 'Singapore')"><img src="singapore-flag.jpg" alt="Singapore Flag"></button>
+        <button class="flag-button" onclick="redirect('sk', 'Slovakia')"><img src="slovakia-flag.jpg" alt="Slovakia Flag"></button>
+        <button class="flag-button" onclick="redirect('si', 'Slovenia')"><img src="slovenia-flag.jpg" alt="Slovenia Flag"></button>
+        <button class="flag-button" onclick="redirect('za', 'south africa')"><img src="south-africa-flag.jpg" alt="South Africa Flag"></button>
+        <button class="flag-button" onclick="redirect('kr', 'south korea')"><img src="south-korea-flag.jpg" alt="South Korea Flag"></button>
+        <button class="flag-button" onclick="redirect('se', 'sweden')"><img src="sweden-flag.jpg" alt="Sweden Flag"></button>
+        <button class="flag-button" onclick="redirect('ch', 'Switzerland')"><img src="switzerland-flag.jpg" alt="Switzerland Flag"></button>
+        <button class="flag-button" onclick="redirect('tw', 'Taiwan')"><img src="taiwan-flag.jpg" alt="Taiwan Flag"></button>
+        <button class="flag-button" onclick="redirect('th', 'Thailand')"><img src="thailand-flag.jpg" alt="Thailand Flag"></button>
+        <button class="flag-button" onclick="redirect('tr', 'Turkey')"><img src="turkey-flag.jpg" alt="Turkey Flag"></button>
+        <button class="flag-button" onclick="redirect('ae', 'UAE')"><img src="uae-flag.jpg" alt="UAE Flag"></button>
+        <button class="flag-button" onclick="redirect('ua', 'Ukraine')"><img src="ukraine-flag.jpg" alt="Ukraine Flag"></button>
+        <button class="flag-button" onclick="redirect('gb', 'UK')"><img src="united-kingdom-flag.jpg" alt="United Kingdom Flag"></button>
+        <button class="flag-button" onclick="redirect('us', 'USA')"><img src="united-states-flag.jpg" alt="United States Flag"></button>
+        <button class="flag-button" onclick="redirect('ve', 'Venezuela')"><img src="venezuela-flag.jpg" alt="Venezuela Flag"></button>
+    </div>
+
+      <script>
+        function redirect(countryCode,countryName) {
+            if (countryCode) {
+                window.location.href = 'display?countryCode=' + countryCode + '&countryName=' + encodeURIComponent(countryName);
+            }
+        }
+    </script>
+
+</body>
+</html>
